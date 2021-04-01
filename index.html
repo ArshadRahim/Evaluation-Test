@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="someFunction">CLick Me</button>
+    <p class="counterText">Count </p>
+
+
+    <p class="someClass"></p>
+    
+    <script>
+
+
+
+    // Answer # 1//
+
+    // Hoisting  is a javascript's built-in feature that helps to manage the code written. For example if we declare a
+    // variable after the variable expression . The declaration will automatically be executed first and then javascript will read the 
+    // variable expression.  
+    
+    //
+
+
+    a = 12
+    var a;
+    
+    //here javascript will read and evaluate the declaration part first.
+        
+
+
+
+        // Answer # 4 //
+        
+        // THIS KEYWORD //
+
+        //This keword refers to the object itself(or we can say the owner). 
+        // FOr example 
+
+      var randomPersons  = { 
+        firstName  : "Amir",
+        lastName : "Khan",
+        age : 33,
+        nationallity : " Pakistani",
+        edu : "BSCS",  
+        fullName () {
+            this.firstName + this.lastName
+        },
+
+        
+        
+    }
+    console.log(randomPersons.age);
+    console.log(randomPersons.fullName);// here this keyword reffers to the object itself. i.e randomPersons
+
+
+
+    // Answer # 6 //
+
+    //CLOSURES IN JAVASCRIPT //
+
+    // Closures are functions inside of a function which can access global variables as well.
+
+    //For Example //
+
+    var add  = function () {
+        count = 0;
+        let someFunction = () => {
+            count += 1
+        }
+        document.getElementsByClassName('someText').innerHTML = add();
+    }
+
+
+
+    /// DOM ///
+
+    // DOM stands for Document object Model.
+    // We use the DOM to change/update/access the HTML elements using Java Script .
+    // There are multiple methods to access HTML elements using DOM.
+    // querySelector , querySelectorAll, 
+    // Get elemetns by ID , Get elements by tag name , get elements by class name   
+
+    // In short we can manipulate the html elements as we want using the DOM.
+
+
+// EXAMPLES ARE //
+
+let books  = ['book1 ', 'book2', 'book3'];
+let hey = '';
+let i;
+for(i = 0; i < books.length; i++) {
+    hey+= books[i] 
+};
+document.getElementsByClassName('someClass').innerHTML = books;
+
+/// Here we printed the data (array data) into our page by simply accessing the html element by its class name . 
+/// We can also change styles though the DOM .
+        
+
+
+
+
+let names  = ['salman', 'rashid', 'zubair', 'raziq'];
+
+let filtered = names.filter(names.length <= 5 )
+console.log(filtered)
+
+
+
+
+/// Answer # 14
+
+/// Asyncronous Programing ///
+// Asyncronous programing in javascript means we can do/run multiple operations/codes at a time without blocking/inturrepting or stoping another operations.
+//So asyncrousous programing means our code block doesn't have to wait for another block of codes to be excecuted first. It means the code executions starts
+// to analyse and excecuting the next lines without waiting for the previous lines;
+
+// here we use async and await keywords. 
+
+
+//Answer # 11 
+
+// Promises //
+
+// Promises are used when we need to execute some asyncronous code .
+// When the block of code is excecuted successfully the resolve keyword is executed other wise in case of errors, the reject keyword is used.
+
+// example //
+
+let myPromise = new Promise(function(resolve, reject) {
+  resolve("done");
+
+  reject(alert("Error occured")); 
+  setTimeout(() => resolve("dONE Successfully"));
+});
+
+alert(myPromise)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
